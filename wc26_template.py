@@ -430,8 +430,8 @@ def build_svg(m, bg_b64=None, font_cfg=None):
     stage = m.get("stage","")
     tag   = m.get("tag", "হাইলাইটস" if mode=="highlights" else "")
 
-    slot_w = 658; base = fc.get("name_base", 163)
-    name_sz = min(fit_size(a_name, base, slot_w), fit_size(b_name, base, slot_w))
+    base = fc.get("name_base", 163)
+    name_sz = base   # obey the size exactly — no auto-shrink / safe-area cap
 
     flag_a = FLAGS.get(a_code, flag_generic)()
     flag_b = FLAGS.get(b_code, flag_generic)()
@@ -635,8 +635,8 @@ def build_svg_portrait(m, bg_b64=None, font_cfg=None):
     stage = m.get("stage", "")
     tag   = m.get("tag", "হাইলাইটস" if mode == "highlights" else "")
 
-    slot_w = 500; base = fc.get("name_base", 163)
-    name_sz = min(fit_size(a_name, base, slot_w), fit_size(b_name, base, slot_w))
+    base = fc.get("name_base", 163)
+    name_sz = base   # obey the size exactly — no auto-shrink / safe-area cap
 
     flag_a = FLAGS.get(a_code, flag_generic)()
     flag_b = FLAGS.get(b_code, flag_generic)()
