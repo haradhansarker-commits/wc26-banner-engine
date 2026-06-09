@@ -26,6 +26,29 @@ FONTS = {
     "mono": None,
 }
 
+def _register_fonts_with_fontconfig():
+    """Make the bundled TTFs visible to fontconfig so librsvg/rsvg-convert can
+    shape Bengali. librsvg ignores @font-face data-URLs (unlike the Playwright
+    fallback), so on hosts using rsvg-convert it relies on system fonts via
+    fontconfig. Copies fonts/ into the user font dir and refreshes the cache.
+    Best-effort and idempotent — safe to call on every import."""
+    import shutil, glob
+    dest = os.path.expanduser("~/.fonts")
+    try:
+        os.makedirs(dest, exist_ok=True)
+        changed = False
+        for f in glob.glob(os.path.join(FONT_DIR, "*.ttf")):
+            target = os.path.join(dest, os.path.basename(f))
+            if not os.path.exists(target):
+                shutil.copy2(f, target); changed = True
+        if changed and shutil.which("fc-cache"):
+            subprocess.run(["fc-cache", "-f", dest], check=False,
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    except Exception:
+        pass
+
+_register_fonts_with_fontconfig()
+
 # ----------------------------------------------------------------------------
 # FLAG LIBRARY — each returns SVG drawn inside a 0..100 x 0..66.67 (3:2) box,
 # placed via a <g transform>. Kept simple/iconic so they read at thumbnail size.
@@ -481,7 +504,7 @@ text{{-webkit-font-smoothing:antialiased;}}
     pill_path = f"M{px},0 H{px+pill_w} V{pill_h-pill_rx} Q{px+pill_w},{pill_h} {px+pill_w-pill_rx},{pill_h} H{px+pill_rx} Q{px},{pill_h} {px},{pill_h-pill_rx} Z"
     dt_fs = fc.get("datetime_fs", 80)
     svg += f'<path d="{pill_path}" fill="#672BE6"/>'
-    svg += f'<text x="{cx:.0f}" y="{pill_y_top + int(dt_fs*1.2)}" text-anchor="middle" font-family="HindB" font-size="{dt_fs}" fill="#ffffff">{pill_text}</text>'
+    svg += f'<text x="{cx:.0f}" y="{pill_y_top + int(dt_fs*1.2)}" text-anchor="middle" font-family="HindB, Hind Siliguri, Noto Sans Bengali, sans-serif" font-size="{dt_fs}" fill="#ffffff">{pill_text}</text>'
 
     # --- FLAGS ---
     for fx, flag, clip_id, glow_id in [
@@ -498,12 +521,12 @@ text{{-webkit-font-smoothing:antialiased;}}
     # --- VS ---
     vy = flag_y + flag_h/2
     svg += f'<circle cx="{cx:.0f}" cy="{vy:.0f}" r="54" fill="#111827" stroke="#ffffff" stroke-width="1.5" opacity="1"/>'
-    svg += f'<text x="{cx:.0f}" y="{vy+19:.0f}" text-anchor="middle" font-family="Latin" font-size="52" fill="#ffffff" letter-spacing="1">VS</text>'
+    svg += f'<text x="{cx:.0f}" y="{vy+19:.0f}" text-anchor="middle" font-family="Latin, Big Shoulders Display, sans-serif" font-size="52" fill="#ffffff" letter-spacing="1">VS</text>'
 
     # --- TEAM NAMES ---
     name_y = flag_y + flag_h + 50 + int(name_sz * 0.80)
-    svg += f'<text x="{name_ax:.0f}" y="{name_y}" text-anchor="middle" font-family="Anek" font-weight="800" font-size="{name_sz:.0f}" fill="#ffffff">{esc(a_name)}</text>'
-    svg += f'<text x="{name_bx:.0f}" y="{name_y}" text-anchor="middle" font-family="Anek" font-weight="800" font-size="{name_sz:.0f}" fill="#ffffff">{esc(b_name)}</text>'
+    svg += f'<text x="{name_ax:.0f}" y="{name_y}" text-anchor="middle" font-family="Anek, Anek Bangla, Noto Sans Bengali, sans-serif" font-weight="800" font-size="{name_sz:.0f}" fill="#ffffff">{esc(a_name)}</text>'
+    svg += f'<text x="{name_bx:.0f}" y="{name_y}" text-anchor="middle" font-family="Anek, Anek Bangla, Noto Sans Bengali, sans-serif" font-weight="800" font-size="{name_sz:.0f}" fill="#ffffff">{esc(b_name)}</text>'
 
     svg += '</svg>'
     return svg
@@ -647,26 +670,26 @@ text{{-webkit-font-smoothing:antialiased;}}
     ppx = int(pill_x)
     pill_path = f"M{ppx},0 H{ppx+pill_w} V{pill_h-pill_rx} Q{ppx+pill_w},{pill_h} {ppx+pill_w-pill_rx},{pill_h} H{ppx+pill_rx} Q{ppx},{pill_h} {ppx},{pill_h-pill_rx} Z"
     svg += f'<path d="{pill_path}" fill="#672BE6"/>'
-    svg += f'<text x="{cx:.0f}" y="{pill_y_top + int(dt_fs_val*1.2)}" text-anchor="middle" font-family="HindB" font-size="{dt_fs_val}" fill="#ffffff">{pill_text}</text>'
+    svg += f'<text x="{cx:.0f}" y="{pill_y_top + int(dt_fs_val*1.2)}" text-anchor="middle" font-family="HindB, Hind Siliguri, Noto Sans Bengali, sans-serif" font-size="{dt_fs_val}" fill="#ffffff">{pill_text}</text>'
 
     # --- FLAG A (top) ---
     svg += f'<rect x="{flag_x-8}" y="{flag_y_a-8}" width="{flag_w+16}" height="{flag_h+16}" rx="18" fill="#0b0e14" stroke="#1e2a38" stroke-width="2"/>'
     svg += f'<g clip-path="url(#flagClipA)"><g transform="translate({flag_x},{flag_y_a}) scale({sclf})">{flag_a}</g></g>'
     svg += f'<rect x="{flag_x}" y="{flag_y_a}" width="{flag_w}" height="{flag_h}" rx="13" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.25"/>'
     svg += f'<rect x="{flag_x}" y="{flag_y_a}" width="{flag_w}" height="{flag_h*0.35:.0f}" rx="13" fill="#ffffff" opacity="0.06"/>'
-    svg += f'<text x="{cx:.0f}" y="{flag_y_a + flag_h + 50 + int(name_sz * 0.80)}" text-anchor="middle" font-family="Anek" font-weight="800" font-size="{name_sz:.0f}" fill="#ffffff">{esc(a_name)}</text>'
+    svg += f'<text x="{cx:.0f}" y="{flag_y_a + flag_h + 50 + int(name_sz * 0.80)}" text-anchor="middle" font-family="Anek, Anek Bangla, Noto Sans Bengali, sans-serif" font-weight="800" font-size="{name_sz:.0f}" fill="#ffffff">{esc(a_name)}</text>'
     svg += f'<line x1="{cx-120}" y1="{rule_y_a}" x2="{cx+120}" y2="{rule_y_a}" stroke="#ffffff" stroke-width="1" opacity="0.2"/>'
 
     # --- VS ---
     svg += f'<circle cx="{cx:.0f}" cy="{cy_vs:.0f}" r="58" fill="#111827" stroke="#ffffff" stroke-width="1.5" opacity="1"/>'
-    svg += f'<text x="{cx:.0f}" y="{cy_vs+21:.0f}" text-anchor="middle" font-family="Latin" font-size="58" fill="#ffffff" letter-spacing="1">VS</text>'
+    svg += f'<text x="{cx:.0f}" y="{cy_vs+21:.0f}" text-anchor="middle" font-family="Latin, Big Shoulders Display, sans-serif" font-size="58" fill="#ffffff" letter-spacing="1">VS</text>'
 
     # --- FLAG B (bottom) ---
     svg += f'<rect x="{flag_x-8}" y="{flag_y_b-8}" width="{flag_w+16}" height="{flag_h+16}" rx="18" fill="#0b0e14" stroke="#1e2a38" stroke-width="2"/>'
     svg += f'<g clip-path="url(#flagClipB)"><g transform="translate({flag_x},{flag_y_b}) scale({sclf})">{flag_b}</g></g>'
     svg += f'<rect x="{flag_x}" y="{flag_y_b}" width="{flag_w}" height="{flag_h}" rx="13" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.25"/>'
     svg += f'<rect x="{flag_x}" y="{flag_y_b}" width="{flag_w}" height="{flag_h*0.35:.0f}" rx="13" fill="#ffffff" opacity="0.06"/>'
-    svg += f'<text x="{cx:.0f}" y="{name_y_b}" text-anchor="middle" font-family="Anek" font-weight="800" font-size="{name_sz:.0f}" fill="#ffffff">{esc(b_name)}</text>'
+    svg += f'<text x="{cx:.0f}" y="{name_y_b}" text-anchor="middle" font-family="Anek, Anek Bangla, Noto Sans Bengali, sans-serif" font-weight="800" font-size="{name_sz:.0f}" fill="#ffffff">{esc(b_name)}</text>'
     svg += f'<line x1="{cx-120}" y1="{rule_y_b}" x2="{cx+120}" y2="{rule_y_b}" stroke="#ffffff" stroke-width="1" opacity="0.2"/>'
 
     svg += '</svg>'
