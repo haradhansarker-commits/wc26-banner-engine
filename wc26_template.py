@@ -233,10 +233,10 @@ def flag_sweden():
 def flag_tunisia():
     return ('<rect width="100" height="66.667" fill="#E70013"/>'
             '<circle cx="50" cy="33.3" r="16" fill="#FFFFFF"/>'
-            '<circle cx="50" cy="33.3" r="13" fill="#E70013"/>'
-            '<circle cx="46" cy="29" r="9" fill="#FFFFFF"/>'
-            '<circle cx="51" cy="29" r="9" fill="#E70013"/>'
-            '<path d="M55,26 L59,33.3 L55,40.6 L58.5,33.3 Z" fill="#FFFFFF"/>')
+            '<path fill="#E70013" d="M53.27,41.80 A10,10 0 1,1 53.27,24.80 '
+            'A8.5,8.5 0 0,0 53.27,41.80 Z"/>'
+            '<path fill="#E70013" d="M56.0,28.3 L57.1,31.8 L60.8,31.8 L57.8,33.9 L58.9,37.3 '
+            'L56.0,35.2 L53.1,37.3 L54.2,33.9 L51.2,31.8 L54.9,31.8 Z"/>')
 
 def flag_belgium():
     return _stripes_v(["#000000","#FAE042","#EF3340"])
@@ -304,10 +304,10 @@ def flag_norway():
 def flag_algeria():
     return ('<rect width="100" height="66.667" fill="#FFFFFF"/>'
             '<rect x="50" y="0" width="50" height="66.667" fill="#006233"/>'
-            '<circle cx="52" cy="29" r="11" fill="#FFFFFF"/>'
-            '<circle cx="57" cy="29" r="11" fill="#006233"/>'
-            '<path d="M54,19 L57,29 L54,39 L57.5,29 Z" fill="#D21034"/>'
-            '<path d="M50,24 L63,29 L50,34 Z" fill="#D21034"/>')
+            '<path fill="#D21034" d="M53.58,42.78 A11,11 0 1,1 53.58,23.82 '
+            'A9.5,9.5 0 0,0 53.58,42.78 Z"/>'
+            '<path fill="#D21034" d="M57.0,27.8 L58.2,31.6 L62.2,31.6 L59.0,33.9 L60.2,37.7 '
+            'L57.0,35.4 L53.8,37.7 L55.0,33.9 L51.8,31.6 L55.8,31.6 Z"/>')
 
 def flag_austria():
     return _stripes_h(["#ED2939","#FFFFFF","#ED2939"])
@@ -324,13 +324,18 @@ def flag_dr_congo():
             '<circle cx="15" cy="7" r="5.5" fill="#F7D116"/>')
 
 def flag_uzbekistan():
-    return ('<rect y="0" width="100" height="22.2" fill="#1EB53A"/>'
-            '<rect y="22.2" width="100" height="4" fill="#FFFFFF"/>'
-            '<rect y="26.2" width="100" height="22.2" fill="#FFFFFF"/>'
-            '<rect y="48.4" width="100" height="4" fill="#FFFFFF"/>'
-            '<rect y="52.4" width="100" height="14.3" fill="#CE1126"/>'
+    stars = ''.join(
+        f'<circle cx="{x}" cy="{y}" r="1.2" fill="#FFFFFF"/>'
+        for y, xs in [(6, (26,31,36,41)), (11, (26,31,36,41,46)), (16, (31,36,41,46))]
+        for x in xs)
+    return ('<rect y="0" width="100" height="22.2" fill="#0099B5"/>'
+            '<rect y="22.2" width="100" height="2.8" fill="#CE1126"/>'
+            '<rect y="25.0" width="100" height="16.7" fill="#FFFFFF"/>'
+            '<rect y="41.7" width="100" height="2.8" fill="#CE1126"/>'
+            '<rect y="44.5" width="100" height="22.2" fill="#1EB53A"/>'
             '<circle cx="13" cy="11" r="7" fill="#FFFFFF"/>'
-            '<circle cx="17.5" cy="11" r="7" fill="#1EB53A"/>')
+            '<circle cx="17.5" cy="11" r="7" fill="#0099B5"/>'
+            + stars)
 
 def flag_colombia():
     return ('<rect width="100" height="33.3" fill="#FCD116"/>'
