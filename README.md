@@ -15,7 +15,7 @@ banner, complete with procedural flags, team accent glows, date/time, and stadiu
 
 Open the web app and make banners right in your browser:
 
-**👉 https://<your-app>.streamlit.app**  *(replace with your deployed URL)*
+**👉 https://wc26-banner-engine.streamlit.app/**
 
 1. Pick a match from the **sidebar** (Match Selector).
 2. *(Optional)* upload your own background image, or tweak font sizes.
