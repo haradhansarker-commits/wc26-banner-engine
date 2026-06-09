@@ -394,16 +394,7 @@ _FIT_CACHE = {}
 def _name_font(px):
     px = int(px)
     if px not in _FIT_CACHE:
-        f = ImageFont.truetype(os.path.join(FONT_DIR, "AnekBangla.ttf"), px)
-        try:
-            # Measure at the SAME weight the SVG renders (font-weight:800).
-            # AnekBangla is variable; its default instance is Medium (500), which
-            # is ~4-5% narrower than the rendered Bold → would underestimate width
-            # and let names overflow when the size slider is raised. Axes: [Weight, Width].
-            f.set_variation_by_axes([800, 100])
-        except Exception:
-            pass
-        _FIT_CACHE[px] = f
+        _FIT_CACHE[px] = ImageFont.truetype(os.path.join(FONT_DIR, "AnekBangla.ttf"), px)
     return _FIT_CACHE[px]
 
 def fit_size(text, base, max_w):
@@ -432,10 +423,6 @@ def build_svg(m, bg_b64=None, font_cfg=None):
 
     slot_w = 658; base = fc.get("name_base", 163)
     name_sz = min(fit_size(a_name, base, slot_w), fit_size(b_name, base, slot_w))
-    # Vertical safe-area cap: the name baseline drops as size grows
-    # (name_y = 831 + 0.8*sz), so cap so short names can't run off the 1080 frame
-    # even when the size slider is pushed to the max.
-    name_sz = min(name_sz, 229)
 
     flag_a = FLAGS.get(a_code, flag_generic)()
     flag_b = FLAGS.get(b_code, flag_generic)()
