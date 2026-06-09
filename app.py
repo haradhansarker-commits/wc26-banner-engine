@@ -2,6 +2,9 @@
 # -*- coding: utf-8 -*-
 """Streamlit preview & batch UI for the WC26 Banner Engine."""
 import os, json, tempfile, io, zipfile
+# Render with Chromium so @font-face fonts match local/dev output exactly
+# (librsvg ignores embedded @font-face). Must be set before importing the engine.
+os.environ.setdefault("WC26_RENDERER", "playwright")
 import streamlit as st
 from wc26_template import render, render_portrait
 

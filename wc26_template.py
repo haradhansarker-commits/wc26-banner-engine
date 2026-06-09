@@ -549,15 +549,28 @@ def _load_bg_b64(m):
                 return base64.b64encode(f.read()).decode()
     return None
 
+def _chromium_path():
+    """System Chromium binary if installed (Streamlit Cloud installs it via the
+    `chromium` apt package). Returns None locally, where Playwright's own bundled
+    browser is used instead."""
+    for p in ("/usr/bin/chromium", "/usr/bin/chromium-browser", "/usr/bin/google-chrome"):
+        if os.path.exists(p):
+            return p
+    return None
+
 def _render_with_playwright(svg_path, out_png, w=W, h=H):
     from playwright.sync_api import sync_playwright
     svg_abs = os.path.abspath(svg_path)
     html = f'<!doctype html><html><body style="margin:0;padding:0;background:#000"><img src="file://{svg_abs}" width="{w}" height="{h}" style="display:block"/></body></html>'
     html_path = svg_path.replace(".svg", "_pw.html")
     with open(html_path, "w", encoding="utf-8") as f: f.write(html)
+    exe = _chromium_path()
+    launch_kw = {"args": ["--no-sandbox", "--disable-dev-shm-usage"]}
+    if exe:
+        launch_kw["executable_path"] = exe
     try:
         with sync_playwright() as p:
-            browser = p.chromium.launch()
+            browser = p.chromium.launch(**launch_kw)
             page = browser.new_page(viewport={"width": w, "height": h})
             page.goto(f"file://{os.path.abspath(html_path)}")
             page.wait_for_timeout(200)
@@ -571,11 +584,18 @@ def render(m, out_png, font_cfg=None):
     svg = build_svg(m, bg_b64=bg_b64, font_cfg=font_cfg)
     svg_path = out_png.replace(".png",".svg")
     with open(svg_path,"w", encoding="utf-8") as f: f.write(svg)
-    # Try rsvg-convert first (best quality); fall back to Playwright/Chromium.
-    try:
-        subprocess.run(["rsvg-convert","-w",str(W),"-h",str(H),svg_path,"-o",out_png], check=True)
-    except (FileNotFoundError, subprocess.CalledProcessError):
-        _render_with_playwright(svg_path, out_png)
+    # WC26_RENDERER=playwright forces Chromium (honors @font-face → exact fonts).
+    # Otherwise try rsvg-convert first, fall back to Playwright/Chromium.
+    if os.environ.get("WC26_RENDERER") == "playwright":
+        try:
+            _render_with_playwright(svg_path, out_png)
+        except Exception:
+            subprocess.run(["rsvg-convert","-w",str(W),"-h",str(H),svg_path,"-o",out_png], check=False)
+    else:
+        try:
+            subprocess.run(["rsvg-convert","-w",str(W),"-h",str(H),svg_path,"-o",out_png], check=True)
+        except (FileNotFoundError, subprocess.CalledProcessError):
+            _render_with_playwright(svg_path, out_png)
     if os.path.exists(svg_path):
         os.remove(svg_path)
     return out_png
@@ -700,10 +720,16 @@ def render_portrait(m, out_png, font_cfg=None):
     svg     = build_svg_portrait(m, bg_b64=bg_b64, font_cfg=font_cfg)
     svg_path = out_png.replace(".png", ".svg")
     with open(svg_path, "w", encoding="utf-8") as f: f.write(svg)
-    try:
-        subprocess.run(["rsvg-convert", "-w", str(WP), "-h", str(HP), svg_path, "-o", out_png], check=True)
-    except (FileNotFoundError, subprocess.CalledProcessError):
-        _render_with_playwright(svg_path, out_png, w=WP, h=HP)
+    if os.environ.get("WC26_RENDERER") == "playwright":
+        try:
+            _render_with_playwright(svg_path, out_png, w=WP, h=HP)
+        except Exception:
+            subprocess.run(["rsvg-convert", "-w", str(WP), "-h", str(HP), svg_path, "-o", out_png], check=False)
+    else:
+        try:
+            subprocess.run(["rsvg-convert", "-w", str(WP), "-h", str(HP), svg_path, "-o", out_png], check=True)
+        except (FileNotFoundError, subprocess.CalledProcessError):
+            _render_with_playwright(svg_path, out_png, w=WP, h=HP)
     if os.path.exists(svg_path):
         os.remove(svg_path)
     return out_png
