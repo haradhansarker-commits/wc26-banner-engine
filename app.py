@@ -137,13 +137,9 @@ with st.sidebar:
     match = fixtures[selected_idx]
     match_no = selected_idx + 1
 
-    # ---- Preview button — kept high so it never falls below the fold ----
-    preview_btn = st.button("▶  Preview", use_container_width=True, type="primary")
-
-    # ---- Match Info Card (scrollable, fixed height) ----
+    # ---- Match Info (accordion) ----
     venue = VENUE_INFO.get(match_no, {})
-    st.caption("Match Info")
-    with st.container(height=150, border=True):
+    with st.expander("📋 Match Info", expanded=True):
         st.markdown(f"""
 | | |
 |---|---|
@@ -174,6 +170,10 @@ with st.sidebar:
     # ---- Custom Background (collapsed) ----
     with st.expander("🖼 Custom Background", expanded=False):
         bg_file = st.file_uploader("Upload PNG/JPG (overrides default)", type=["png","jpg","jpeg"])
+
+    # ---- Preview button — at the end of all sidebar sections ----
+    st.divider()
+    preview_btn = st.button("▶  Preview", use_container_width=True, type="primary")
 
 # ---------------------------------------------------------------------------
 # PREVIEW
