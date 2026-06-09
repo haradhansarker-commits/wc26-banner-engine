@@ -389,12 +389,25 @@ ACCENT = {
 
 def esc(s): return s.replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")
 
+from PIL import ImageFont
+_FIT_CACHE = {}
+def _name_font(px):
+    px = int(px)
+    if px not in _FIT_CACHE:
+        _FIT_CACHE[px] = ImageFont.truetype(os.path.join(FONT_DIR, "AnekBangla.ttf"), px)
+    return _FIT_CACHE[px]
+
 def fit_size(text, base, max_w):
-    """Crude width-aware shrink so long Bengali names stay inside their slot."""
-    # Bengali avg advance ~ 0.62em. Conservative.
-    est = len(text) * base * 0.62
-    if est <= max_w: return base
-    return max(base * max_w / est * 0.90, base * 0.45)
+    """Width-aware shrink so long Bengali names stay inside their slot.
+    Measures the real advance width with the actual display font instead of
+    guessing from character count (Bengali conjuncts/matras make len() overcount).
+    Width scales ~linearly with px, so a single measurement gives an accurate fit."""
+    w = _name_font(base).getlength(text)
+    if w <= max_w:
+        return base
+    # Absolute legibility floor (px) rather than a ratio of base: a 0.45*base
+    # floor still overflowed long real names like "বসনিয়া ও হার্জেগোভিনা".
+    return max(base * max_w / w, 44)
 
 def build_svg(m, bg_b64=None, font_cfg=None):
     fc = font_cfg or {}
