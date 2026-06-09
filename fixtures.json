@@ -1,0 +1,1042 @@
+[
+  {
+    "a_code": "MEX",
+    "a_name": "মেক্সিকো",
+    "b_code": "RSA",
+    "b_name": "দক্ষিণ আফ্রিকা",
+    "mode": "fixture",
+    "stage": "গ্রুপ এ",
+    "line1": "১২ জুন ২০২৬",
+    "line2": "রাত ১ঃ০০"
+  },
+  {
+    "a_code": "KOR",
+    "a_name": "দক্ষিণ কোরিয়া",
+    "b_code": "CZE",
+    "b_name": "চেক রিপাবলিক",
+    "mode": "fixture",
+    "stage": "গ্রুপ এ",
+    "line1": "১২ জুন ২০২৬",
+    "line2": "সকাল ৮ঃ০০"
+  },
+  {
+    "a_code": "CAN",
+    "a_name": "কানাডা",
+    "b_code": "BIH",
+    "b_name": "বসনিয়া ও হার্জেগোভিনা",
+    "mode": "fixture",
+    "stage": "গ্রুপ বি",
+    "line1": "১৩ জুন ২০২৬",
+    "line2": "রাত ১ঃ০০"
+  },
+  {
+    "a_code": "USA",
+    "a_name": "যুক্তরাষ্ট্র",
+    "b_code": "PAR",
+    "b_name": "প্যারাগুয়ে",
+    "mode": "fixture",
+    "stage": "গ্রুপ ডি",
+    "line1": "১৩ জুন ২০২৬",
+    "line2": "সকাল ৭ঃ০০"
+  },
+  {
+    "a_code": "QAT",
+    "a_name": "কাতার",
+    "b_code": "SUI",
+    "b_name": "সুইজারল্যান্ড",
+    "mode": "fixture",
+    "stage": "গ্রুপ বি",
+    "line1": "১৪ জুন ২০২৬",
+    "line2": "রাত ১ঃ০০"
+  },
+  {
+    "a_code": "BRA",
+    "a_name": "ব্রাজিল",
+    "b_code": "MAR",
+    "b_name": "মরক্কো",
+    "mode": "fixture",
+    "stage": "গ্রুপ সি",
+    "line1": "১৪ জুন ২০২৬",
+    "line2": "ভোর ৪ঃ০০"
+  },
+  {
+    "a_code": "HAI",
+    "a_name": "হাইতি",
+    "b_code": "SCO",
+    "b_name": "স্কটল্যান্ড",
+    "mode": "fixture",
+    "stage": "গ্রুপ সি",
+    "line1": "১৪ জুন ২০২৬",
+    "line2": "সকাল ৭ঃ০০"
+  },
+  {
+    "a_code": "AUS",
+    "a_name": "অস্ট্রেলিয়া",
+    "b_code": "TUR",
+    "b_name": "তুরস্ক",
+    "mode": "fixture",
+    "stage": "গ্রুপ ডি",
+    "line1": "১৪ জুন ২০২৬",
+    "line2": "সকাল ১০ঃ০০"
+  },
+  {
+    "a_code": "GER",
+    "a_name": "জার্মানি",
+    "b_code": "CUW",
+    "b_name": "কুরাসাও",
+    "mode": "fixture",
+    "stage": "গ্রুপ ই",
+    "line1": "১৪ জুন ২০২৬",
+    "line2": "রাত ১১ঃ০০"
+  },
+  {
+    "a_code": "NED",
+    "a_name": "নেদারল্যান্ডস",
+    "b_code": "JPN",
+    "b_name": "জাপান",
+    "mode": "fixture",
+    "stage": "গ্রুপ এফ",
+    "line1": "১৫ জুন ২০২৬",
+    "line2": "রাত ২ঃ০০"
+  },
+  {
+    "a_code": "CIV",
+    "a_name": "আইভোরি কোস্ট",
+    "b_code": "ECU",
+    "b_name": "ইকুয়েডর",
+    "mode": "fixture",
+    "stage": "গ্রুপ ই",
+    "line1": "১৫ জুন ২০২৬",
+    "line2": "ভোর ৫ঃ০০"
+  },
+  {
+    "a_code": "SWE",
+    "a_name": "সুইডেন",
+    "b_code": "TUN",
+    "b_name": "তিউনিসিয়া",
+    "mode": "fixture",
+    "stage": "গ্রুপ এফ",
+    "line1": "১৫ জুন ২০২৬",
+    "line2": "সকাল ৮ঃ০০"
+  },
+  {
+    "a_code": "ESP",
+    "a_name": "স্পেন",
+    "b_code": "CPV",
+    "b_name": "কাবো ভার্দে",
+    "mode": "fixture",
+    "stage": "গ্রুপ এইচ",
+    "line1": "১৫ জুন ২০২৬",
+    "line2": "রাত ১০ঃ০০"
+  },
+  {
+    "a_code": "BEL",
+    "a_name": "বেলজিয়াম",
+    "b_code": "EGY",
+    "b_name": "মিশর",
+    "mode": "fixture",
+    "stage": "গ্রুপ জি",
+    "line1": "১৬ জুন ২০২৬",
+    "line2": "রাত ১ঃ০০"
+  },
+  {
+    "a_code": "KSA",
+    "a_name": "সৌদি আরব",
+    "b_code": "URU",
+    "b_name": "উরুগুয়ে",
+    "mode": "fixture",
+    "stage": "গ্রুপ এইচ",
+    "line1": "১৬ জুন ২০২৬",
+    "line2": "ভোর ৪ঃ০০"
+  },
+  {
+    "a_code": "IRN",
+    "a_name": "ইরান",
+    "b_code": "NZL",
+    "b_name": "নিউজিল্যান্ড",
+    "mode": "fixture",
+    "stage": "গ্রুপ জি",
+    "line1": "১৬ জুন ২০২৬",
+    "line2": "সকাল ৭ঃ০০"
+  },
+  {
+    "a_code": "FRA",
+    "a_name": "ফ্রান্স",
+    "b_code": "SEN",
+    "b_name": "সেনেগাল",
+    "mode": "fixture",
+    "stage": "গ্রুপ আই",
+    "line1": "১৭ জুন ২০২৬",
+    "line2": "রাত ১ঃ০০"
+  },
+  {
+    "a_code": "IRQ",
+    "a_name": "ইরাক",
+    "b_code": "NOR",
+    "b_name": "নরওয়ে",
+    "mode": "fixture",
+    "stage": "গ্রুপ আই",
+    "line1": "১৭ জুন ২০২৬",
+    "line2": "ভোর ৪ঃ০০"
+  },
+  {
+    "a_code": "ARG",
+    "a_name": "আর্জেন্টিনা",
+    "b_code": "ALG",
+    "b_name": "আলজেরিয়া",
+    "mode": "fixture",
+    "stage": "গ্রুপ জে",
+    "line1": "১৭ জুন ২০২৬",
+    "line2": "সকাল ৭ঃ০০"
+  },
+  {
+    "a_code": "AUT",
+    "a_name": "অস্ট্রিয়া",
+    "b_code": "JOR",
+    "b_name": "জর্ডান",
+    "mode": "fixture",
+    "stage": "গ্রুপ জে",
+    "line1": "১৭ জুন ২০২৬",
+    "line2": "সকাল ১০ঃ০০"
+  },
+  {
+    "a_code": "POR",
+    "a_name": "পর্তুগাল",
+    "b_code": "COD",
+    "b_name": "কঙ্গো ডিআর",
+    "mode": "fixture",
+    "stage": "গ্রুপ কে",
+    "line1": "১৭ জুন ২০২৬",
+    "line2": "রাত ১১ঃ০০"
+  },
+  {
+    "a_code": "ENG",
+    "a_name": "ইংল্যান্ড",
+    "b_code": "CRO",
+    "b_name": "ক্রোয়েশিয়া",
+    "mode": "fixture",
+    "stage": "গ্রুপ এল",
+    "line1": "১৮ জুন ২০২৬",
+    "line2": "রাত ২ঃ০০"
+  },
+  {
+    "a_code": "GHA",
+    "a_name": "ঘানা",
+    "b_code": "PAN",
+    "b_name": "পানামা",
+    "mode": "fixture",
+    "stage": "গ্রুপ এল",
+    "line1": "১৮ জুন ২০২৬",
+    "line2": "ভোর ৫ঃ০০"
+  },
+  {
+    "a_code": "UZB",
+    "a_name": "উজবেকিস্তান",
+    "b_code": "COL",
+    "b_name": "কলম্বিয়া",
+    "mode": "fixture",
+    "stage": "গ্রুপ কে",
+    "line1": "১৮ জুন ২০২৬",
+    "line2": "সকাল ৮ঃ০০"
+  },
+  {
+    "a_code": "CZE",
+    "a_name": "চেক রিপাবলিক",
+    "b_code": "RSA",
+    "b_name": "দক্ষিণ আফ্রিকা",
+    "mode": "fixture",
+    "stage": "গ্রুপ এ",
+    "line1": "১৮ জুন ২০২৬",
+    "line2": "রাত ১০ঃ০০"
+  },
+  {
+    "a_code": "SUI",
+    "a_name": "সুইজারল্যান্ড",
+    "b_code": "BIH",
+    "b_name": "বসনিয়া ও হার্জেগোভিনা",
+    "mode": "fixture",
+    "stage": "গ্রুপ বি",
+    "line1": "১৯ জুন ২০২৬",
+    "line2": "রাত ১ঃ০০"
+  },
+  {
+    "a_code": "CAN",
+    "a_name": "কানাডা",
+    "b_code": "QAT",
+    "b_name": "কাতার",
+    "mode": "fixture",
+    "stage": "গ্রুপ বি",
+    "line1": "১৯ জুন ২০২৬",
+    "line2": "ভোর ৪ঃ০০"
+  },
+  {
+    "a_code": "MEX",
+    "a_name": "মেক্সিকো",
+    "b_code": "KOR",
+    "b_name": "দক্ষিণ কোরিয়া",
+    "mode": "fixture",
+    "stage": "গ্রুপ এ",
+    "line1": "১৯ জুন ২০২৬",
+    "line2": "সকাল ৭ঃ০০"
+  },
+  {
+    "a_code": "USA",
+    "a_name": "যুক্তরাষ্ট্র",
+    "b_code": "AUS",
+    "b_name": "অস্ট্রেলিয়া",
+    "mode": "fixture",
+    "stage": "গ্রুপ ডি",
+    "line1": "২০ জুন ২০২৬",
+    "line2": "রাত ১ঃ০০"
+  },
+  {
+    "a_code": "SCO",
+    "a_name": "স্কটল্যান্ড",
+    "b_code": "MAR",
+    "b_name": "মরক্কো",
+    "mode": "fixture",
+    "stage": "গ্রুপ সি",
+    "line1": "২০ জুন ২০২৬",
+    "line2": "ভোর ৪ঃ০০"
+  },
+  {
+    "a_code": "BRA",
+    "a_name": "ব্রাজিল",
+    "b_code": "HAI",
+    "b_name": "হাইতি",
+    "mode": "fixture",
+    "stage": "গ্রুপ সি",
+    "line1": "২০ জুন ২০২৬",
+    "line2": "সকাল ৬ঃ৩০"
+  },
+  {
+    "a_code": "TUR",
+    "a_name": "তুরস্ক",
+    "b_code": "PAR",
+    "b_name": "প্যারাগুয়ে",
+    "mode": "fixture",
+    "stage": "গ্রুপ ডি",
+    "line1": "২০ জুন ২০২৬",
+    "line2": "সকাল ৯ঃ০০"
+  },
+  {
+    "a_code": "NED",
+    "a_name": "নেদারল্যান্ডস",
+    "b_code": "SWE",
+    "b_name": "সুইডেন",
+    "mode": "fixture",
+    "stage": "গ্রুপ এফ",
+    "line1": "২০ জুন ২০২৬",
+    "line2": "রাত ১১ঃ০০"
+  },
+  {
+    "a_code": "GER",
+    "a_name": "জার্মানি",
+    "b_code": "CIV",
+    "b_name": "আইভোরি কোস্ট",
+    "mode": "fixture",
+    "stage": "গ্রুপ ই",
+    "line1": "২১ জুন ২০২৬",
+    "line2": "রাত ২ঃ০০"
+  },
+  {
+    "a_code": "ECU",
+    "a_name": "ইকুয়েডর",
+    "b_code": "CUW",
+    "b_name": "কুরাসাও",
+    "mode": "fixture",
+    "stage": "গ্রুপ ই",
+    "line1": "২১ জুন ২০২৬",
+    "line2": "সকাল ৬ঃ০০"
+  },
+  {
+    "a_code": "TUN",
+    "a_name": "তিউনিসিয়া",
+    "b_code": "JPN",
+    "b_name": "জাপান",
+    "mode": "fixture",
+    "stage": "গ্রুপ এফ",
+    "line1": "২১ জুন ২০২৬",
+    "line2": "সকাল ১০ঃ০০"
+  },
+  {
+    "a_code": "ESP",
+    "a_name": "স্পেন",
+    "b_code": "KSA",
+    "b_name": "সৌদি আরব",
+    "mode": "fixture",
+    "stage": "গ্রুপ এইচ",
+    "line1": "২১ জুন ২০২৬",
+    "line2": "রাত ১০ঃ০০"
+  },
+  {
+    "a_code": "BEL",
+    "a_name": "বেলজিয়াম",
+    "b_code": "IRN",
+    "b_name": "ইরান",
+    "mode": "fixture",
+    "stage": "গ্রুপ জি",
+    "line1": "২২ জুন ২০২৬",
+    "line2": "রাত ১ঃ০০"
+  },
+  {
+    "a_code": "URU",
+    "a_name": "উরুগুয়ে",
+    "b_code": "CPV",
+    "b_name": "কাবো ভার্দে",
+    "mode": "fixture",
+    "stage": "গ্রুপ এইচ",
+    "line1": "২২ জুন ২০২৬",
+    "line2": "ভোর ৪ঃ০০"
+  },
+  {
+    "a_code": "NZL",
+    "a_name": "নিউজিল্যান্ড",
+    "b_code": "EGY",
+    "b_name": "মিশর",
+    "mode": "fixture",
+    "stage": "গ্রুপ জি",
+    "line1": "২২ জুন ২০২৬",
+    "line2": "সকাল ৭ঃ০০"
+  },
+  {
+    "a_code": "ARG",
+    "a_name": "আর্জেন্টিনা",
+    "b_code": "AUT",
+    "b_name": "অস্ট্রিয়া",
+    "mode": "fixture",
+    "stage": "গ্রুপ জে",
+    "line1": "২২ জুন ২০২৬",
+    "line2": "রাত ১১ঃ০০"
+  },
+  {
+    "a_code": "FRA",
+    "a_name": "ফ্রান্স",
+    "b_code": "IRQ",
+    "b_name": "ইরাক",
+    "mode": "fixture",
+    "stage": "গ্রুপ আই",
+    "line1": "২৩ জুন ২০২৬",
+    "line2": "রাত ৩ঃ০০"
+  },
+  {
+    "a_code": "NOR",
+    "a_name": "নরওয়ে",
+    "b_code": "SEN",
+    "b_name": "সেনেগাল",
+    "mode": "fixture",
+    "stage": "গ্রুপ আই",
+    "line1": "২৩ জুন ২০২৬",
+    "line2": "সকাল ৬ঃ০০"
+  },
+  {
+    "a_code": "JOR",
+    "a_name": "জর্ডান",
+    "b_code": "ALG",
+    "b_name": "আলজেরিয়া",
+    "mode": "fixture",
+    "stage": "গ্রুপ জে",
+    "line1": "২৩ জুন ২০২৬",
+    "line2": "সকাল ৯ঃ০০"
+  },
+  {
+    "a_code": "POR",
+    "a_name": "পর্তুগাল",
+    "b_code": "UZB",
+    "b_name": "উজবেকিস্তান",
+    "mode": "fixture",
+    "stage": "গ্রুপ কে",
+    "line1": "২৩ জুন ২০২৬",
+    "line2": "রাত ১১ঃ০০"
+  },
+  {
+    "a_code": "ENG",
+    "a_name": "ইংল্যান্ড",
+    "b_code": "GHA",
+    "b_name": "ঘানা",
+    "mode": "fixture",
+    "stage": "গ্রুপ এল",
+    "line1": "২৪ জুন ২০২৬",
+    "line2": "রাত ২ঃ০০"
+  },
+  {
+    "a_code": "PAN",
+    "a_name": "পানামা",
+    "b_code": "CRO",
+    "b_name": "ক্রোয়েশিয়া",
+    "mode": "fixture",
+    "stage": "গ্রুপ এল",
+    "line1": "২৪ জুন ২০২৬",
+    "line2": "ভোর ৫ঃ০০"
+  },
+  {
+    "a_code": "COL",
+    "a_name": "কলম্বিয়া",
+    "b_code": "COD",
+    "b_name": "কঙ্গো ডিআর",
+    "mode": "fixture",
+    "stage": "গ্রুপ কে",
+    "line1": "২৪ জুন ২০২৬",
+    "line2": "সকাল ৮ঃ০০"
+  },
+  {
+    "a_code": "BIH",
+    "a_name": "বসনিয়া ও হার্জেগোভিনা",
+    "b_code": "QAT",
+    "b_name": "কাতার",
+    "mode": "fixture",
+    "stage": "গ্রুপ বি",
+    "line1": "২৫ জুন ২০২৬",
+    "line2": "রাত ১ঃ০০"
+  },
+  {
+    "a_code": "SUI",
+    "a_name": "সুইজারল্যান্ড",
+    "b_code": "CAN",
+    "b_name": "কানাডা",
+    "mode": "fixture",
+    "stage": "গ্রুপ বি",
+    "line1": "২৫ জুন ২০২৬",
+    "line2": "রাত ১ঃ০০"
+  },
+  {
+    "a_code": "MAR",
+    "a_name": "মরক্কো",
+    "b_code": "HAI",
+    "b_name": "হাইতি",
+    "mode": "fixture",
+    "stage": "গ্রুপ সি",
+    "line1": "২৫ জুন ২০২৬",
+    "line2": "ভোর ৪ঃ০০"
+  },
+  {
+    "a_code": "SCO",
+    "a_name": "স্কটল্যান্ড",
+    "b_code": "BRA",
+    "b_name": "ব্রাজিল",
+    "mode": "fixture",
+    "stage": "গ্রুপ সি",
+    "line1": "২৫ জুন ২০২৬",
+    "line2": "ভোর ৪ঃ০০"
+  },
+  {
+    "a_code": "CZE",
+    "a_name": "চেক রিপাবলিক",
+    "b_code": "MEX",
+    "b_name": "মেক্সিকো",
+    "mode": "fixture",
+    "stage": "গ্রুপ এ",
+    "line1": "২৫ জুন ২০২৬",
+    "line2": "সকাল ৭ঃ০০"
+  },
+  {
+    "a_code": "RSA",
+    "a_name": "দক্ষিণ আফ্রিকা",
+    "b_code": "KOR",
+    "b_name": "দক্ষিণ কোরিয়া",
+    "mode": "fixture",
+    "stage": "গ্রুপ এ",
+    "line1": "২৫ জুন ২০২৬",
+    "line2": "সকাল ৭ঃ০০"
+  },
+  {
+    "a_code": "CUW",
+    "a_name": "কুরাসাও",
+    "b_code": "CIV",
+    "b_name": "আইভোরি কোস্ট",
+    "mode": "fixture",
+    "stage": "গ্রুপ ই",
+    "line1": "২৬ জুন ২০২৬",
+    "line2": "রাত ২ঃ০০"
+  },
+  {
+    "a_code": "ECU",
+    "a_name": "ইকুয়েডর",
+    "b_code": "GER",
+    "b_name": "জার্মানি",
+    "mode": "fixture",
+    "stage": "গ্রুপ ই",
+    "line1": "২৬ জুন ২০২৬",
+    "line2": "রাত ২ঃ০০"
+  },
+  {
+    "a_code": "JPN",
+    "a_name": "জাপান",
+    "b_code": "SWE",
+    "b_name": "সুইডেন",
+    "mode": "fixture",
+    "stage": "গ্রুপ এফ",
+    "line1": "২৬ জুন ২০২৬",
+    "line2": "ভোর ৫ঃ০০"
+  },
+  {
+    "a_code": "TUN",
+    "a_name": "তিউনিসিয়া",
+    "b_code": "NED",
+    "b_name": "নেদারল্যান্ডস",
+    "mode": "fixture",
+    "stage": "গ্রুপ এফ",
+    "line1": "২৬ জুন ২০২৬",
+    "line2": "ভোর ৫ঃ০০"
+  },
+  {
+    "a_code": "PAR",
+    "a_name": "প্যারাগুয়ে",
+    "b_code": "AUS",
+    "b_name": "অস্ট্রেলিয়া",
+    "mode": "fixture",
+    "stage": "গ্রুপ ডি",
+    "line1": "২৬ জুন ২০২৬",
+    "line2": "সকাল ৮ঃ০০"
+  },
+  {
+    "a_code": "TUR",
+    "a_name": "তুরস্ক",
+    "b_code": "USA",
+    "b_name": "যুক্তরাষ্ট্র",
+    "mode": "fixture",
+    "stage": "গ্রুপ ডি",
+    "line1": "২৬ জুন ২০২৬",
+    "line2": "সকাল ৮ঃ০০"
+  },
+  {
+    "a_code": "NOR",
+    "a_name": "নরওয়ে",
+    "b_code": "FRA",
+    "b_name": "ফ্রান্স",
+    "mode": "fixture",
+    "stage": "গ্রুপ আই",
+    "line1": "২৭ জুন ২০২৬",
+    "line2": "রাত ১ঃ০০"
+  },
+  {
+    "a_code": "SEN",
+    "a_name": "সেনেগাল",
+    "b_code": "IRQ",
+    "b_name": "ইরাক",
+    "mode": "fixture",
+    "stage": "গ্রুপ আই",
+    "line1": "২৭ জুন ২০২৬",
+    "line2": "রাত ১ঃ০০"
+  },
+  {
+    "a_code": "CPV",
+    "a_name": "কাবো ভার্দে",
+    "b_code": "KSA",
+    "b_name": "সৌদি আরব",
+    "mode": "fixture",
+    "stage": "গ্রুপ এইচ",
+    "line1": "২৭ জুন ২০২৬",
+    "line2": "সকাল ৬ঃ০০"
+  },
+  {
+    "a_code": "URU",
+    "a_name": "উরুগুয়ে",
+    "b_code": "ESP",
+    "b_name": "স্পেন",
+    "mode": "fixture",
+    "stage": "গ্রুপ এইচ",
+    "line1": "২৭ জুন ২০২৬",
+    "line2": "সকাল ৬ঃ০০"
+  },
+  {
+    "a_code": "EGY",
+    "a_name": "মিশর",
+    "b_code": "IRN",
+    "b_name": "ইরান",
+    "mode": "fixture",
+    "stage": "গ্রুপ জি",
+    "line1": "২৭ জুন ২০২৬",
+    "line2": "সকাল ৯ঃ০০"
+  },
+  {
+    "a_code": "NZL",
+    "a_name": "নিউজিল্যান্ড",
+    "b_code": "BEL",
+    "b_name": "বেলজিয়াম",
+    "mode": "fixture",
+    "stage": "গ্রুপ জি",
+    "line1": "২৭ জুন ২০২৬",
+    "line2": "সকাল ৯ঃ০০"
+  },
+  {
+    "a_code": "CRO",
+    "a_name": "ক্রোয়েশিয়া",
+    "b_code": "GHA",
+    "b_name": "ঘানা",
+    "mode": "fixture",
+    "stage": "গ্রুপ এল",
+    "line1": "২৮ জুন ২০২৬",
+    "line2": "রাত ৩ঃ০০"
+  },
+  {
+    "a_code": "PAN",
+    "a_name": "পানামা",
+    "b_code": "ENG",
+    "b_name": "ইংল্যান্ড",
+    "mode": "fixture",
+    "stage": "গ্রুপ এল",
+    "line1": "২৮ জুন ২০২৬",
+    "line2": "রাত ৩ঃ০০"
+  },
+  {
+    "a_code": "COL",
+    "a_name": "কলম্বিয়া",
+    "b_code": "POR",
+    "b_name": "পর্তুগাল",
+    "mode": "fixture",
+    "stage": "গ্রুপ কে",
+    "line1": "২৮ জুন ২০২৬",
+    "line2": "ভোর ৫ঃ৩০"
+  },
+  {
+    "a_code": "COD",
+    "a_name": "কঙ্গো ডিআর",
+    "b_code": "UZB",
+    "b_name": "উজবেকিস্তান",
+    "mode": "fixture",
+    "stage": "গ্রুপ কে",
+    "line1": "২৮ জুন ২০২৬",
+    "line2": "ভোর ৫ঃ৩০"
+  },
+  {
+    "a_code": "ALG",
+    "a_name": "আলজেরিয়া",
+    "b_code": "AUT",
+    "b_name": "অস্ট্রিয়া",
+    "mode": "fixture",
+    "stage": "গ্রুপ জে",
+    "line1": "২৮ জুন ২০২৬",
+    "line2": "সকাল ৮ঃ০০"
+  },
+  {
+    "a_code": "JOR",
+    "a_name": "জর্ডান",
+    "b_code": "ARG",
+    "b_name": "আর্জেন্টিনা",
+    "mode": "fixture",
+    "stage": "গ্রুপ জে",
+    "line1": "২৮ জুন ২০২৬",
+    "line2": "সকাল ৮ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "গ্রুপ এ রানার্সআপ",
+    "b_code": "TBD",
+    "b_name": "গ্রুপ বি রানার্সআপ",
+    "mode": "fixture",
+    "stage": "রাউন্ড অব ৩২",
+    "line1": "২৯ জুন ২০২৬",
+    "line2": "রাত ১ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "গ্রুপ সি বিজয়ী",
+    "b_code": "TBD",
+    "b_name": "গ্রুপ এফ রানার্সআপ",
+    "mode": "fixture",
+    "stage": "রাউন্ড অব ৩২",
+    "line1": "২৯ জুন ২০২৬",
+    "line2": "রাত ১১ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "গ্রুপ ই বিজয়ী",
+    "b_code": "TBD",
+    "b_name": "সেরা তৃতীয় দল",
+    "mode": "fixture",
+    "stage": "রাউন্ড অব ৩২",
+    "line1": "৩০ জুন ২০২৬",
+    "line2": "রাত ২ঃ৩০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "গ্রুপ এফ বিজয়ী",
+    "b_code": "TBD",
+    "b_name": "গ্রুপ সি রানার্সআপ",
+    "mode": "fixture",
+    "stage": "রাউন্ড অব ৩২",
+    "line1": "৩০ জুন ২০২৬",
+    "line2": "সকাল ৭ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "গ্রুপ ই রানার্সআপ",
+    "b_code": "TBD",
+    "b_name": "গ্রুপ আই রানার্সআপ",
+    "mode": "fixture",
+    "stage": "রাউন্ড অব ৩২",
+    "line1": "৩০ জুন ২০২৬",
+    "line2": "রাত ১১ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "গ্রুপ আই বিজয়ী",
+    "b_code": "TBD",
+    "b_name": "সেরা তৃতীয় দল",
+    "mode": "fixture",
+    "stage": "রাউন্ড অব ৩২",
+    "line1": "১ জুলাই ২০২৬",
+    "line2": "রাত ৩ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "গ্রুপ এ বিজয়ী",
+    "b_code": "TBD",
+    "b_name": "সেরা তৃতীয় দল",
+    "mode": "fixture",
+    "stage": "রাউন্ড অব ৩২",
+    "line1": "১ জুলাই ২০২৬",
+    "line2": "সকাল ৭ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "গ্রুপ এল বিজয়ী",
+    "b_code": "TBD",
+    "b_name": "সেরা তৃতীয় দল",
+    "mode": "fixture",
+    "stage": "রাউন্ড অব ৩২",
+    "line1": "১ জুলাই ২০২৬",
+    "line2": "রাত ১০ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "গ্রুপ জি বিজয়ী",
+    "b_code": "TBD",
+    "b_name": "সেরা তৃতীয় দল",
+    "mode": "fixture",
+    "stage": "রাউন্ড অব ৩২",
+    "line1": "২ জুলাই ২০২৬",
+    "line2": "রাত ২ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "গ্রুপ ডি বিজয়ী",
+    "b_code": "TBD",
+    "b_name": "সেরা তৃতীয় দল",
+    "mode": "fixture",
+    "stage": "রাউন্ড অব ৩২",
+    "line1": "২ জুলাই ২০২৬",
+    "line2": "সকাল ৬ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "গ্রুপ এইচ বিজয়ী",
+    "b_code": "TBD",
+    "b_name": "গ্রুপ জে রানার্সআপ",
+    "mode": "fixture",
+    "stage": "রাউন্ড অব ৩২",
+    "line1": "৩ জুলাই ২০২৬",
+    "line2": "রাত ১ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "গ্রুপ কে রানার্সআপ",
+    "b_code": "TBD",
+    "b_name": "গ্রুপ এল রানার্সআপ",
+    "mode": "fixture",
+    "stage": "রাউন্ড অব ৩২",
+    "line1": "৩ জুলাই ২০২৬",
+    "line2": "ভোর ৫ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "গ্রুপ বি বিজয়ী",
+    "b_code": "TBD",
+    "b_name": "সেরা তৃতীয় দল",
+    "mode": "fixture",
+    "stage": "রাউন্ড অব ৩২",
+    "line1": "৩ জুলাই ২০২৬",
+    "line2": "সকাল ৯ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "গ্রুপ ডি রানার্সআপ",
+    "b_code": "TBD",
+    "b_name": "গ্রুপ জি রানার্সআপ",
+    "mode": "fixture",
+    "stage": "রাউন্ড অব ৩২",
+    "line1": "৪ জুলাই ২০২৬",
+    "line2": "রাত ১২ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "গ্রুপ জে বিজয়ী",
+    "b_code": "TBD",
+    "b_name": "গ্রুপ এইচ রানার্সআপ",
+    "mode": "fixture",
+    "stage": "রাউন্ড অব ৩২",
+    "line1": "৪ জুলাই ২০২৬",
+    "line2": "ভোর ৪ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "গ্রুপ কে বিজয়ী",
+    "b_code": "TBD",
+    "b_name": "সেরা তৃতীয় দল",
+    "mode": "fixture",
+    "stage": "রাউন্ড অব ৩২",
+    "line1": "৪ জুলাই ২০২৬",
+    "line2": "সকাল ৭ঃ৩০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "রাউন্ড অব ৩২ বিজয়ী",
+    "b_code": "TBD",
+    "b_name": "রাউন্ড অব ৩২ বিজয়ী",
+    "mode": "fixture",
+    "stage": "রাউন্ড অব ১৬",
+    "line1": "৪ জুলাই ২০২৬",
+    "line2": "রাত ১১ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "রাউন্ড অব ৩২ বিজয়ী",
+    "b_code": "TBD",
+    "b_name": "রাউন্ড অব ৩২ বিজয়ী",
+    "mode": "fixture",
+    "stage": "রাউন্ড অব ১৬",
+    "line1": "৫ জুলাই ২০২৬",
+    "line2": "রাত ৩ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "রাউন্ড অব ৩২ বিজয়ী",
+    "b_code": "TBD",
+    "b_name": "রাউন্ড অব ৩২ বিজয়ী",
+    "mode": "fixture",
+    "stage": "রাউন্ড অব ১৬",
+    "line1": "৬ জুলাই ২০২৬",
+    "line2": "রাত ২ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "রাউন্ড অব ৩২ বিজয়ী",
+    "b_code": "TBD",
+    "b_name": "রাউন্ড অব ৩২ বিজয়ী",
+    "mode": "fixture",
+    "stage": "রাউন্ড অব ১৬",
+    "line1": "৬ জুলাই ২০২৬",
+    "line2": "সকাল ৬ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "রাউন্ড অব ৩২ বিজয়ী",
+    "b_code": "TBD",
+    "b_name": "রাউন্ড অব ৩২ বিজয়ী",
+    "mode": "fixture",
+    "stage": "রাউন্ড অব ১৬",
+    "line1": "৭ জুলাই ২০২৬",
+    "line2": "রাত ১ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "রাউন্ড অব ৩২ বিজয়ী",
+    "b_code": "TBD",
+    "b_name": "রাউন্ড অব ৩২ বিজয়ী",
+    "mode": "fixture",
+    "stage": "রাউন্ড অব ১৬",
+    "line1": "৭ জুলাই ২০২৬",
+    "line2": "সকাল ৬ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "রাউন্ড অব ৩২ বিজয়ী",
+    "b_code": "TBD",
+    "b_name": "রাউন্ড অব ৩২ বিজয়ী",
+    "mode": "fixture",
+    "stage": "রাউন্ড অব ১৬",
+    "line1": "৭ জুলাই ২০২৬",
+    "line2": "রাত ১০ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "রাউন্ড অব ৩২ বিজয়ী",
+    "b_code": "TBD",
+    "b_name": "রাউন্ড অব ৩২ বিজয়ী",
+    "mode": "fixture",
+    "stage": "রাউন্ড অব ১৬",
+    "line1": "৮ জুলাই ২০২৬",
+    "line2": "রাত ২ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "আর-১৬ ম্যাচ ১ বিজয়ী",
+    "b_code": "TBD",
+    "b_name": "আর-১৬ ম্যাচ ২ বিজয়ী",
+    "mode": "fixture",
+    "stage": "কোয়ার্টার ফাইনাল",
+    "line1": "১০ জুলাই ২০২৬",
+    "line2": "রাত ২ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "আর-১৬ ম্যাচ ৫ বিজয়ী",
+    "b_code": "TBD",
+    "b_name": "আর-১৬ ম্যাচ ৬ বিজয়ী",
+    "mode": "fixture",
+    "stage": "কোয়ার্টার ফাইনাল",
+    "line1": "১১ জুলাই ২০২৬",
+    "line2": "রাত ১ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "আর-১৬ ম্যাচ ৩ বিজয়ী",
+    "b_code": "TBD",
+    "b_name": "আর-১৬ ম্যাচ ৪ বিজয়ী",
+    "mode": "fixture",
+    "stage": "কোয়ার্টার ফাইনাল",
+    "line1": "১২ জুলাই ২০২৬",
+    "line2": "রাত ৩ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "আর-১৬ ম্যাচ ৭ বিজয়ী",
+    "b_code": "TBD",
+    "b_name": "আর-১৬ ম্যাচ ৮ বিজয়ী",
+    "mode": "fixture",
+    "stage": "কোয়ার্টার ফাইনাল",
+    "line1": "১২ জুলাই ২০২৬",
+    "line2": "সকাল ৭ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "কোয়ার্টার ফাইনাল ১ বিজয়ী",
+    "b_code": "TBD",
+    "b_name": "কোয়ার্টার ফাইনাল ২ বিজয়ী",
+    "mode": "fixture",
+    "stage": "সেমি ফাইনাল",
+    "line1": "১৫ জুলাই ২০২৬",
+    "line2": "রাত ১ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "কোয়ার্টার ফাইনাল ৩ বিজয়ী",
+    "b_code": "TBD",
+    "b_name": "কোয়ার্টার ফাইনাল ৪ বিজয়ী",
+    "mode": "fixture",
+    "stage": "সেমি ফাইনাল",
+    "line1": "১৬ জুলাই ২০২৬",
+    "line2": "রাত ১ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "সেমি ফাইনাল ১ পরাজিত",
+    "b_code": "TBD",
+    "b_name": "সেমি ফাইনাল ২ পরাজিত",
+    "mode": "fixture",
+    "stage": "তৃতীয় স্থান নির্ধারণী",
+    "line1": "১৯ জুলাই ২০২৬",
+    "line2": "রাত ৩ঃ০০"
+  },
+  {
+    "a_code": "TBD",
+    "a_name": "সেমি ফাইনাল ১ বিজয়ী",
+    "b_code": "TBD",
+    "b_name": "সেমি ফাইনাল ২ বিজয়ী",
+    "mode": "fixture",
+    "stage": "ফাইনাল",
+    "line1": "২০ জুলাই ২০২৬",
+    "line2": "রাত ১ঃ০০"
+  }
+]

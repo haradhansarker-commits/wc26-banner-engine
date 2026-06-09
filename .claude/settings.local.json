@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip3 --version)",
+      "Read(//usr/local/bin/**)",
+      "Read(//opt/homebrew/bin/**)",
+      "Bash(pip3 show *)",
+      "Bash(pip3 install *)",
+      "Bash(/Users/haradhansarker/Library/Python/3.9/bin/streamlit run *)",
+      "Bash(curl -s http://localhost:8501)"
+    ]
+  }
+}
