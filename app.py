@@ -127,7 +127,7 @@ fixtures = load_fixtures(FIXTURES_PATH)
 # SIDEBAR
 # ---------------------------------------------------------------------------
 with st.sidebar:
-    st.header("Match Selector")
+    st.subheader("⚽ Match Selector")
 
     options = [
         f"Match {i} — {m['a_code']} vs {m['b_code']}  |  {m.get('stage','')}"
@@ -137,11 +137,14 @@ with st.sidebar:
     match = fixtures[selected_idx]
     match_no = selected_idx + 1
 
-    # ---- Match Info Card ----
+    # ---- Preview button — kept high so it never falls below the fold ----
+    preview_btn = st.button("▶  Preview", use_container_width=True, type="primary")
+
+    # ---- Match Info Card (scrollable, fixed height) ----
     venue = VENUE_INFO.get(match_no, {})
-    st.divider()
-    st.subheader("Match Info")
-    st.markdown(f"""
+    st.caption("Match Info")
+    with st.container(height=150, border=True):
+        st.markdown(f"""
 | | |
 |---|---|
 | **Group** | {match.get('stage', '—')} |
@@ -151,8 +154,7 @@ with st.sidebar:
 | **City** | {venue.get('city', '—')}, {venue.get('country', '')} |
 """)
 
-    # ---- Font Sizes ----
-    st.divider()
+    # ---- Font Sizes (collapsed) ----
     with st.expander("⚙ Font Sizes", expanded=False):
         fc = st.session_state.font_cfg
         st.caption("16:9 Landscape")
@@ -169,13 +171,9 @@ with st.sidebar:
     ls_dt_fs, ls_name_fs = fc["ls_dt"], fc["ls_nm"]
     pt_dt_fs, pt_name_fs = fc["pt_dt"], fc["pt_nm"]
 
-    # ---- Background Upload ----
-    st.divider()
-    st.subheader("Custom Background")
-    bg_file = st.file_uploader("Upload PNG/JPG (overrides default)", type=["png","jpg","jpeg"])
-
-    st.divider()
-    preview_btn = st.button("▶  Preview", use_container_width=True, type="primary")
+    # ---- Custom Background (collapsed) ----
+    with st.expander("🖼 Custom Background", expanded=False):
+        bg_file = st.file_uploader("Upload PNG/JPG (overrides default)", type=["png","jpg","jpeg"])
 
 # ---------------------------------------------------------------------------
 # PREVIEW
@@ -261,44 +259,36 @@ if pv:
             st.image(data, caption=cap, use_container_width=True)
 
 # ---------------------------------------------------------------------------
-# BATCH GENERATION
+# TOURNAMENT OVERVIEW  (replaces the old batch generator)
 # ---------------------------------------------------------------------------
 st.divider()
-st.header("Batch Generation")
+st.header("📊 Tournament at a Glance")
 
-out_dir = st.text_input("Output directory", "out")
-bg_batch = st.file_uploader("Global background (optional)", type=["png","jpg","jpeg"], key="bg_batch")
-st.caption(f"{len(fixtures)} fixtures → {len(fixtures) * 4} images (landscape + portrait × fixture + highlights)")
+_stadiums = {v["stadium"] for v in VENUE_INFO.values()}
+_cities   = {v["city"]    for v in VENUE_INFO.values()}
+_teams    = {c for m in fixtures for c in (m.get("a_code"), m.get("b_code")) if c}
 
-if st.button("⚙  Generate All", use_container_width=True):
-    os.makedirs(out_dir, exist_ok=True)
-    global_bg_path = None
-    if bg_batch:
-        tmp_bg = tempfile.NamedTemporaryFile(suffix=".png", delete=False)
-        tmp_bg.write(bg_batch.read()); tmp_bg.close()
-        global_bg_path = tmp_bg.name
+c1, c2, c3, c4 = st.columns(4)
+c1.metric("Matches",   len(fixtures))
+c2.metric("Teams",     len(_teams))
+c3.metric("Stadiums",  len(_stadiums))
+c4.metric("Host Cities", len(_cities))
 
-    progress = st.progress(0, text="Starting…")
-    log_box   = st.empty()
-    log_lines = []
+st.markdown("""
+### 🟢 How to use
+1. **Pick a match** in the left sidebar.
+2. *(Optional)* open **Custom Background** to upload your own photo, or **Font Sizes** to fine-tune.
+3. Hit **▶ Preview** — fixture + highlights banners render in both landscape and portrait.
+4. Click **⬇ Download All (ZIP)** above the preview to save all four PNGs.
 
-    for i, m in enumerate(fixtures, 1):
-        base = os.path.join(out_dir, f"match_{i:03d}_{m['a_code']}_{m['b_code']}")
-        mc = dict(m); hc = dict(m)
-        hc["mode"] = "highlights"; hc.setdefault("tag", "ম্যাচ হাইলাইটস")
-        if global_bg_path:
-            mc.setdefault("bg", global_bg_path)
-            hc.setdefault("bg", global_bg_path)
-        render(mc,          base + ".png")
-        render(hc,          base + "_HL.png")
-        render_portrait(mc, base + "_P.png")
-        render_portrait(hc, base + "_HL_P.png")
-        line = f"[{i}/{len(fixtures)}] {m['a_code']} vs {m['b_code']}"
-        log_lines.append(line)
-        progress.progress(i / len(fixtures), text=line)
-        log_box.code("\n".join(log_lines[-10:]))
+### 💡 Tips
+- Country names auto-shrink **together**, so any name length fills the same slot cleanly.
+- Need every match at once? Run the batch locally: `python3 batch.py` → images land in `out/`.
+""")
 
-    if global_bg_path:
-        os.unlink(global_bg_path)
-    progress.progress(1.0, text="Done!")
-    st.success(f"Generated {len(fixtures) * 4} images in `{out_dir}/`")
+st.divider()
+gh = "https://github.com/haradhansarker-commits/wc26-banner-engine"
+lc1, lc2 = st.columns(2)
+lc1.link_button("📖  README & Guide", f"{gh}#readme", use_container_width=True)
+lc2.link_button("⭐  Source on GitHub", gh, use_container_width=True)
+st.caption("FIFA World Cup 2026 · Bengali team-vs-team banners · 16:9 + 2:3")
